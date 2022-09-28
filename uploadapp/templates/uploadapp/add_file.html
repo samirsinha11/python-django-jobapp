@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{%block title%} Flexcareers | Apply{%endblock title%}
+{% block content %}
+<section>
+    <div class="container">
+ <form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+    <div class="buttons">
+          <button class="apply">
+            <a href="{% url 'upload_file'%}">Upload</a>
+          </button>
+      </div>
+</form>
+    {% if saved_object %}
+    <h2> Upload sucessfull {{saved_object.file.url}} </h2>
+    <h2> File description {{saved_object.description}} </h2>
+    {% endif %} 
+    {% endblock content %}

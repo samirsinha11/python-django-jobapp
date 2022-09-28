@@ -1,0 +1,9 @@
+{% if is_autheticated %}
+<h1>Hello {{name}}</h1>
+<h2>Your age is  {{age}}</h2>
+{%else%}
+<h1>Hello user please login</h1>
+{%endif%}
+{%for l in list %}
+<h2> {{l}} </h2>
+{% endfor %}

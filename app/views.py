@@ -1,5 +1,5 @@
 from multiprocessing import context
-from tkinter import EXCEPTION
+#from tkinter import EXCEPTION
 from django.shortcuts import render
 from django.shortcuts import HttpResponse, redirect
 from django.urls import reverse

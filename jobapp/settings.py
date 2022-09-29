@@ -87,10 +87,10 @@ WSGI_APPLICATION = "jobapp.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.env("DB_NAME"),
-        'USER': os.env("DB_USER"),
-        'PASSWORD': os.env("DB_PASSWORD"),
-        'HOST': os.env("DB_HOST"),
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("DB_HOST"),
         'PORT': '5432',
     }
 }
